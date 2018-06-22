@@ -1,0 +1,46 @@
+i.fab.fa-facebook {
+    font-size: 35px;
+    color: #3a3a7e;
+}
+i.fab.fa-google {
+    font-size: 35px;
+    /* color: #0a0a0d; */
+    color: #00933B;  
+}
+i.fab.fa-github {
+    font-size: 35px;
+    color: #0a0a0d;
+
+}
+
+.container{
+    text-align:center;
+}
+
+input#id_username {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 270px;
+    height: 37px;
+    padding: 0 12px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    outline: none;
+    text-overflow: ellipses;
+    content:'Enter User Name'
+}     
+
+input#id_password {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 270px;
+    height: 37px;
+    padding: 0 12px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    outline: none;
+    text-overflow: ellipses;
+    content:'Enter User Name'
+}     
