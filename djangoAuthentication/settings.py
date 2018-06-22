@@ -75,6 +75,7 @@ TEMPLATES = [
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -130,13 +131,25 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
 LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = 'home'
 
+# social_auth
 
 SOCIAL_AUTH_GITHUB_KEY = '87bc4f4322ec8f27e74d'
 SOCIAL_AUTH_GITHUB_SECRET = 'ab4d59a7904b74325ebd6602e561bec5f5d95308'
 
 SOCIAL_AUTH_FACEBOOK_KEY = '247518015802520' 
 SOCIAL_AUTH_FACEBOOK_SECRET = 'c3a083e07482a91cf071f0439b5e07ff' 
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '37068313340-uevjsjklcjejt1tbficlvaloql68ktc7.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'qLu07ho9lIXaRHOsHZtWhqmY'

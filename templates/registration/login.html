@@ -1,30 +1,27 @@
 {% extends 'index.html' %}
-
 {% block title %}Login{% endblock %}
-
+{% load static %}
 {% block content %}
-<style>
-    i.fab.fa-facebook {
-    font-size: 35px;
-    color: #3a3a7e;
-}
-i.fab.fa-github {
-    font-size: 35px;
-    color: #0a0a0d;
-    width: 50px;
-    padding-left: 20px;
-}
-</style>
-<h2>Login</h2>
+<head>
+  
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
 
+<div class="container">
+<h2>Dashboard</h2>
+    
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Login</button>
+    <button class="btn btn-success">Login</button>
 </form>
 <br>
   <p><strong>-- OR --</strong></p>
+  <div class="social-buttons">
+  <a href="{% url 'social:begin' 'google-oauth2' %}"><i class="fab fa-google"></i></i></a>  
   <a href="{% url 'social:begin' 'github' %}"><i class="fab fa-github"></i></a>
   <a href="{% url 'social:begin' 'facebook' %}"><i class="fab fa-facebook"></i></a>
-  
+</div>
+</div>
 {% endblock %}
