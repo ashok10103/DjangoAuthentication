@@ -1,0 +1,11 @@
+./vscode
+.vscode/settings.json
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+Pipfile
+Pipfile.lock
